@@ -9,6 +9,7 @@
                 // "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "-pg",
                 "-o",
                 "${fileDirname}/bin/${fileBasenameNoExtension}"
             ],

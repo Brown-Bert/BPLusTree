@@ -1,9 +1,10 @@
-#include "ThreadPool.h"
-#include "tree.h"
 #include <iostream>
 #include <mutex>
 #include <string>
 #include <vector>
+
+#include "ThreadPool.h"
+#include "tree.h"
 
 using namespace std;
 
@@ -32,33 +33,31 @@ vector<int> readFile(string file_path_name) {
   return v;
 }
 
-// int main(int argc, char** argv){
-
-//     string file_path_name = "../doc/data100.txt";
-//     ofstream ofs;
-// 	ofs.open(file_path_name, ios::out);
-// 	if (!ofs.is_open()) {
-// 		return false;
-// 	}
-//     int sum = 3;
-// 	vector<double> datas;
-//     vector<int> v = readFile("../doc/B+treeCopy.txt");
-// 	datas.resize(sum - 2);
-// 	{
-// 		int  i = 2;
-// 		MyThreadPool pool(300);
-// 		for(;i < sum;){
-// 			i++;
-// 			pool.enqueue(test, ref(datas), i, v);
-// 		}
-// 	}
-//     for(vector<double>::iterator it = datas.begin(); it != datas.end(); it++)
-//     {
-// 		cout << *it << endl;
-// 		ofs  << *it << "\n";
-// 	}
-//     return 0;
-// }
+int main(int argc, char **argv) {
+  string file_path_name = "../doc/data100.txt";
+  ofstream ofs;
+  ofs.open(file_path_name, ios::out);
+  if (!ofs.is_open()) {
+    return 1;
+  }
+  int sum = 3;
+  vector<double> datas;
+  vector<int> v = readFile("../doc/B+treeCopy.txt");
+  datas.resize(sum - 2);
+  {
+    int i = 2;
+    MyThreadPool pool(300);
+    for (; i < sum;) {
+      i++;
+      pool.enqueue(test, ref(datas), i, v);
+    }
+  }
+  for (vector<double>::iterator it = datas.begin(); it != datas.end(); it++) {
+    cout << *it << endl;
+    ofs << *it << "\n";
+  }
+  return 0;
+}
 mutex mtx;
 void test(vector<double> &datas, int degree, vector<int> v) {
   BPlusTree<int> tree;

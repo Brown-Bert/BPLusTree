@@ -2,8 +2,8 @@ add_library(treecpp STATIC tree.cpp)
 
 target_include_directories(treecpp PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
-add_executable(test testMain.cpp)
+add_executable(treeMain treeMain.cpp)
 
-target_link_libraries(test PRIVATE treecpp)
+target_link_libraries(treeMain PRIVATE treecpp)
 
-target_include_directories(test PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(treeMain PRIVATE ${CMAKE_SOURCE_DIR}/include)

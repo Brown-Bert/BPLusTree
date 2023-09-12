@@ -38,7 +38,7 @@
             "program": "${fileDirname}/bin/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/build/bin",
+            // "cwd": "${workspaceFolder}/build/bin",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
