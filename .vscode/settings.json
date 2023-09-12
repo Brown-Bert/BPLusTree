@@ -56,7 +56,10 @@
         "thread": "cpp",
         "typeinfo": "cpp",
         ".clang-format": "yaml",
-        ".clang-tidy": "yaml"
+        ".clang-tidy": "yaml",
+        "http.proxy": "http://113.54.205.124:7890",
+        "https.proxy": "https://113.54.205.124:7890",
+        "http.proxyStrictSSL": false
     },
     "cmake.sourceDirectory": "/home/yzx/vscode/workspace/B+Tree",
     "[c]": {
@@ -65,5 +68,5 @@
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
 }
