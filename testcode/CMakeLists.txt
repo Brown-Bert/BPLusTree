@@ -1,5 +1,5 @@
 # 添加测试用例
-add_executable(test_add test_add.cpp)
+add_executable(test_add testadd.cpp)
 
 # 链接gtest库
 find_package(GTest REQUIRED)
