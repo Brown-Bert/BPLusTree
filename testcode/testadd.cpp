@@ -1,4 +1,2 @@
 #include "tree.h"
-int add(int a, int b){
-  return a + b;
-}
+TEST(ADDTEST, ADD) { EXPECT_EQ(5, add(2, 3)); }
