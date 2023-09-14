@@ -18,4 +18,4 @@ target_link_libraries(${PROJECT_NAME}
     gtest
     gtest_main
 )
-# add_dependencies(${PROJECT_NAME} gtest gtest_main)
+add_dependencies(${PROJECT_NAME} gtest gtest_main)
