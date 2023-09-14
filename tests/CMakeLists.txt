@@ -6,8 +6,8 @@ AUX_SOURCE_DIRECTORY("${CMAKE_CURRENT_SOURCE_DIR}" test_src)
 
 add_executable(${PROJECT_NAME} ${src} ${test_src})
 
-find_package(GTest REQUIRED)
-target_link_libraries(test_add GTest::GTest GTest::Main)
+# find_package(GTest REQUIRED)
+# target_link_libraries(test_add GTest::GTest GTest::Main)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/googletest-main/googletest/include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/googletest-main/googlemock/include)
